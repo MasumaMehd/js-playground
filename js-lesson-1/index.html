@@ -1,0 +1,46 @@
+
+<script>
+var username = 'irrevion';
+// var ref = username || title || foo || 'guest';
+// var ref = username ?? title ?? foo ?? 'guest';
+var ref = window?.username ?? window?.title ?? window?.foo ?? 'guest';
+var greeting = `Hello, ${ref}`;
+console.log(greeting);
+
+(function(username) {
+	console.log(`Hello, ${username ?? 'guest'}`);
+})();
+
+(function() {
+	//var username = null;
+	let username = 'killh';
+	{
+	let username = 'olikj';
+	console.log(`Hello, ${username ?? 'guest'}`);
+	}
+})();
+
+console.log(username);
+
+
+/*
+*
+* Task: using given json iterate over penguins and console log number of children
+*
+*/
+var json = '[{"name":"Jessy"},{"name":"Cony","children":[{"name":"Mary"},{"name":"Johny"}]}]';
+// console.log(json);
+var penguins = JSON.parse(json);
+// console.log(penguins);
+penguins.forEach((v, i) => {
+	// console.log(i, v);
+	/*
+	let children_num = 0;
+	if (v && v.children && v.children.length) {
+		children_num = v.children.length;
+	}
+	*/
+	let children_num = v.children?.length ?? 0;
+	console.log(`${v.name} has ${children_num} children`);
+});
+</script>
