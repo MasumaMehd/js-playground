@@ -15,12 +15,18 @@ console.log(greeting);
 	//var username = null;
 	let username = 'killh';
 	{
-	let username = 'olikj';
-	console.log(`Hello, ${username ?? 'guest'}`);
+		let username = 'olikj';
+		console.log(`Hello, ${username ?? 'guest'}`);
+		console.log('tadaaam', window.username);
 	}
 })();
 
 console.log(username);
+
+var sum = function(a=undefined, b=0) {
+	return a+b;
+};
+console.log(isNaN(sum(undefined, 12)));
 
 
 /*
@@ -40,7 +46,29 @@ penguins.forEach((v, i) => {
 		children_num = v.children.length;
 	}
 	*/
+	//let children_num = ((v && v.children && v.children.length)? v.children.length: 0);
 	let children_num = v.children?.length ?? 0;
 	console.log(`${v.name} has ${children_num} children`);
 });
+</script>
+
+<script>
+const user = {name: "masuma"};
+user.name = "noname";
+console.log(user);
+let x = 3;
+x = ""+x;
+x = x*1;
+x = !!x;
+x = "-15px;";
+console.log(parseInt(x));
+console.log(x*1);
+let y = +Infinity;
+y*=5;
+console.log(5/y);
+let text = 'multi\n\
+line';
+alert(text);
+var array = [];
+console.log(typeof array);
 </script>
