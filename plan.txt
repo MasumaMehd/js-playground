@@ -1,0 +1,35 @@
+Курс по фронтенд программированию
+
+Javascript
+
+1. Синтаксис, переменные, типы данных
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Grammar_and_types
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Text_formatting#string_literals
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
+2. Массивы и методы работы с ними (find, filter, map)
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterate_over_an_array
+3. Отправка Ajax запросов (Fetch, Axios, jQuery), HTTP, REST
+4. Classes, Objects, importing
+5. Мутабельность объектов (shallow copy, destructurisation)
+6. This, Arrow functions, Closures
+7. Event listeners / callbacks (Native, Jquery)
+	https://javascript.info/bubbling-and-capturing
+8. DOM, properties, attributes
+
+React
+
+1. JSX and Components concept
+2. Functional components
+3. Hooks, useState, useEffect
+4. Routing
+
+Node
+
+1. Promises
+2. Middlewares
+3. Express
