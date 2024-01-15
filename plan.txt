@@ -14,6 +14,9 @@ Javascript
 	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
 	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#iterate_over_an_array
 3. Отправка Ajax запросов (Fetch, Axios, jQuery), HTTP, REST
+	https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+	https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises
 4. Classes, Objects, importing
 5. Мутабельность объектов (shallow copy, destructurisation)
 6. This, Arrow functions, Closures
