@@ -1,0 +1,62 @@
+<script>
+let employees = [
+	{
+		name: 'Valentin Belousov',
+		kpi: -9.9e12,
+		position: 'CTO',
+		speciality: 'Linear Algebra'
+	},
+	{
+		name: 'Tofik Huseynov',
+		kpi: 9999,
+		position: 'Teamlead',
+		speciality: 'Game Dev'
+	},
+	{
+		name: 'Masuma Mehdiyeva',
+		kpi: 7777,
+		position: 'Frontend dev',
+		speciality: 'Mobile dev'
+	},
+	{
+		name: 'Emil Zeynalov',
+		kpi: 5555,
+		position: 'Tapşanutıy çayld',
+		speciality: 'Anime'
+	},
+	{
+		name: 'ChatGPT',
+		kpi: 2e6,
+		position: 'Artificial Intelligence',
+		speciality: 'Language model'
+	}
+];
+
+var badgeTemplate = `
+<div class="employee-badge {rank}">
+	<p class="employee-name">{name}</p>
+	<div class="employee-info">
+		<p><strong>Position</strong> {position}</p>
+		<p><strong>Speciality</strong> {speciality}</p>
+	</div>
+</div>
+`;
+console.log(employees, badgeTemplate);
+
+/*
+	Задача 1:
+	БЕЗ использования циклов, только используя reduce, filter, map
+	сгенерировать бейджики сотрудников у которых больше 200 kpi
+	с зелёной рамкой если kpi больше 800
+*/
+
+let speed = [63, 92, 81, 120, 111, 145, 54, 21, 0];
+
+/*
+	Задача 2:
+	С помощью reduce вычислить среднюю скорость по формуле avg+=((val-avg)/(i+1));
+*/
+
+</script>
+
+<div class="best-employees"></div>

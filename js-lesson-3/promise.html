@@ -1,0 +1,43 @@
+<script>
+var goAway = function() {
+	let myPeopleGo = new Promise((resolve, reject) => {
+		reject('Getdim');
+		// setTimeout(() => {resolve('Getdim');}, 2000);
+	});
+	return myPeopleGo;
+};
+var a = goAway()
+	.then((result) => {
+		console.log('***', result);
+		return 1;
+	})
+	.then((result) => {
+		console.log('***', result);
+		return 1;
+	})
+	.then((result) => {
+		console.log('***', result);
+		return 1;
+	})
+	.then((result) => {
+		console.log('***', result);
+		throw new Error('You shall not pass!');
+		return 1;
+	})
+	.then((result) => {
+		console.log('***', result);
+		Promise.resolve(1)
+			.then((person) => {
+				console.log('who is '+person+'?');
+			});
+	})
+	.catch((err) => {
+		console.log('---', err);
+		return Promise.reject('pseudoMasuma');
+	})
+	.catch((err) => {
+		console.log('Impossible!!! '+err);
+		return 0;
+	})
+console.log(a);
+</script>
