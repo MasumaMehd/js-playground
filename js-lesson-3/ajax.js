@@ -1,19 +1,56 @@
-fetch('http://localhost/mektebeqebul.edu.az/rest/login')
-    .then((res) => {
-        console.log(res);
-        if (res.status.toString().charAt(0)===2) {
-            return Promise.resolve(res);
+import axios from 'axios';
+
+let auth = {
+    credentials: {
+        login: 'londiks',
+        password: 'testpass'
+    },
+    token: null
+};
+
+axios
+    .post(
+        'http://localhost/mektebeqebul.edu.az/rest/login',
+        auth.credentials,
+        {headers: {'Content-Type': 'application/json'}}
+    )
+    .then((response) => {
+        if (response && response.data && response.data.success) {
+            let i = response.data;
+            console.log(i.message+' (user: '+i.data.user.login+')');
+            auth.token = i.data.jwt_token;
         } else {
-            return Promise.reject(res);
+            throw {response: {status: '200', statusText: response.data.message}};
         }
+        return Promise.resolve(response);
     })
-    .then((res) => {
-        console.log('URA');
+    .then(res => {
+        axios
+            .get(
+                'http://localhost/mektebeqebul.edu.az/rest/check-auth-token',
+                {headers: {
+                    'Content-Type': 'application/json',
+                    'X-Auth-Token': auth.token,
+                    'Authorization': 'Bearer '+auth.token
+                }}
+            )
+            .then(res => {
+                if (res && res.data && res.data.success) {
+                    let i = res.data;
+                    auth.user = i.data.user_info;
+                    console.log(auth);
+                } else {
+                    throw {response: {status: '200', statusText: res.data.message}};
+                }
+            })
+            .catch(err => {
+                throw err;
+            });
     })
-    .catch((err) => {
-        let msg = err.status+': '+err.statusText;
-        console.log(msg);
+    .catch(err => {
+        console.log('Err:', err.response.status, err.response.statusText);
     });
+
 
 /*
 axios.post(
